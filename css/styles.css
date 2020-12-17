@@ -1,0 +1,269 @@
+@import url("https://fonts.googleapis.com/css2?family=Yellowtail&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+body {
+  background-image: url("../images/white-wall.jpg");
+  font-family: "Roboto", sans-serif;
+}
+
+.top-section {
+  background-color: rgba(255, 171, 148, 0.85);
+
+  /* margin-top: 1%; */
+  padding: 4% 0;
+  display: grid;
+  grid-template-columns: 1fr 2fr 2fr 2fr;
+  grid-auto-rows: auto;
+  grid-template-areas:
+    ". . . ."
+    ". para1 vector vector "
+    ". para1 vector vector "
+    ". para1 vector vector ";
+}
+
+.top-section p:first-child {
+  font-family: "Yellowtail", cursive;
+  font-size: 60pt;
+}
+
+.top-section p:nth-child(2) {
+  padding-left: 15%;
+}
+
+#para1 {
+  grid-area: para1;
+  padding-top: 35%;
+  font-size: 25pt;
+}
+
+#vectorSelf {
+  grid-area: vector;
+  padding-left: 20%;
+}
+
+.contact-section {
+  margin: 4% 18% 0 18%;
+  padding: 2%;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-bottom: #dcf2e6 solid 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-auto-rows: auto;
+  grid-template-areas:
+    "contact-part1 contact-part1 contact-part2 contact-part2"
+    "contact-part1 contact-part1 contact-part2 contact-part2";
+}
+
+.contact-section #contact-part1 {
+  grid-area: contact-part1;
+  text-align: center;
+}
+
+.contact-section h2 {
+  font-size: 28pt;
+}
+
+.contact-section #contact-part2 {
+  grid-area: contact-part2;
+  text-align: center;
+}
+
+.social-media-section {
+  margin: 0 30%;
+  padding: 2%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-auto-rows: auto;
+  grid-template-areas: "linkedin github insta";
+}
+
+.social-media-section #linkedin {
+  grid-area: linkedin;
+}
+
+.social-media-section #github {
+  grid-area: github;
+  margin: 0;
+}
+
+.social-media-section #insta {
+  grid-area: insta;
+}
+
+footer {
+  background-color: #dcf2e6;
+  text-align: center;
+  padding: 1% 0;
+  margin-top: 2%;
+}
+
+footer p {
+  margin: 0;
+}
+
+/****  About Page Styling  ****/
+
+.about-top-section {
+  background-color: rgba(255, 171, 148, 0.79);
+  margin: 8% 10% 5% 10%;
+  padding: 2% 0 5% 0;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-auto-rows: auto;
+  grid-template-areas:
+    " . aboutTitle ."
+    " aboutPara aboutPara picture "
+    " aboutPara aboutPara picture ";
+}
+
+.about-top-section h2 {
+  grid-area: aboutTitle;
+  font-family: "Yellowtail", cursive;
+  font-size: 36pt;
+  text-align: center;
+  padding-top: 5%;
+  padding-bottom: 2%;
+}
+
+.about-top-section p {
+  grid-area: aboutPara;
+  padding: 2% 0% 2% 10%;
+}
+
+.about-top-section img {
+  grid-area: picture;
+  padding-left: 10%;
+}
+
+.skills-chart-section {
+  background-color: rgba(255, 255, 255, 0.8);
+  margin-top: 10%;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-auto-rows: auto;
+  grid-template-areas:
+    ". skillsTitle ."
+    ". img .";
+}
+
+section:nth-of-type(2) h2 {
+  text-align: center;
+  padding-top: 2%;
+  font-family: "Yellowtail", cursive;
+  font-size: 36pt;
+  grid-area: skillsTitle;
+}
+
+section:nth-of-type(2) img {
+  grid-area: img;
+  padding: 2% 0 2% 2%;
+}
+
+.about-footer {
+  margin-top: 2%;
+}
+
+/*** Project Page Styles **/
+
+#projectContainer {
+  text-align: center;
+  display: grid;
+  padding-bottom: 4%;
+  column-gap: 1%;
+  row-gap: 2%;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-auto-rows: auto;
+  grid-template-areas:
+    ". . . projectTitle . . ."
+    ". . box1 . box2 . ."
+    ". . box1 . box2 . ."
+    ". . box1 box4 box2 . ."
+    ". . box3 box4 box5 . ."
+    ". . box3 . box5 . ."
+    ". . box3 . box5 . .";
+}
+
+#projectContainer h2 {
+  grid-area: projectTitle;
+  padding-top: 4%;
+  font-family: "Yellowtail", cursive;
+  font-size: 36pt;
+  text-align: center;
+}
+
+#projectContainer p {
+  margin-top: 2%;
+}
+
+.projectBox1 {
+  grid-area: box1;
+  background-color: rgba(255, 255, 255);
+  box-shadow: 5px 5px 5px #888888;
+}
+
+.projectBox2 {
+  grid-area: box2;
+  background-color: rgba(255, 255, 255);
+  box-shadow: 5px 5px 5px #888888;
+}
+
+.projectBox3 {
+  grid-area: box3;
+  background-color: rgba(255, 255, 255);
+  box-shadow: 5px 5px 5px #888888;
+}
+
+.projectBox4 {
+  grid-area: box4;
+  background-color: rgba(255, 255, 255);
+  box-shadow: 5px 5px 5px #888888;
+}
+
+.projectBox5 {
+  grid-area: box5;
+  background-color: rgba(255, 255, 255);
+  box-shadow: 5px 5px 5px #888888;
+}
+
+#project-footer {
+  margin-top: 8%;
+}
+
+/*** Resume Page Styles **/
+
+#resumeContainer {
+  padding-bottom: 0%;
+  display: grid;
+  grid-template-columns: 1fr 2fr 2fr 2fr 2fr;
+  grid-auto-rows: auto;
+  grid-template-areas:
+    ". resumeInfo resumeInfo resume resume"
+    ". resumeInfo resumeInfo resume resume";
+}
+
+.resumeFirstSection {
+  grid-area: resumeInfo;
+  margin: 5% 35% 45% 0;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.resumeFirstSection h2 {
+  font-family: "Yellowtail", cursive;
+  font-size: 36pt;
+  padding: 10% 0 0 30%;
+}
+
+.resumeFirstSection a {
+  padding-left: 35%;
+}
+
+.resumeSecondSection {
+  grid-area: resume;
+  padding-top: 4%;
+}
+
+#resume-footer {
+  margin-top: 2%;
+}
