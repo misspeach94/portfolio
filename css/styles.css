@@ -271,9 +271,7 @@ section:nth-of-type(2) img {
 /* Media Queries for Mobile */
 
 @media screen and (max-width: 600px) {
-  html {
-    margin: 0;
-  }
+  /* Main Page */
 
   .top-section {
     background-color: rgba(255, 171, 148, 0.85);
@@ -379,5 +377,195 @@ section:nth-of-type(2) img {
 
   footer p {
     margin: 0;
+  }
+
+  /* End Of main page */
+
+  /* About page */
+  .about-top-section {
+    background-color: rgba(255, 171, 148, 0.79);
+    margin: 0;
+    padding: 5% 0;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: auto;
+    grid-template-areas:
+      "aboutTitle"
+      "aboutPara"
+      "picture";
+  }
+
+  .about-top-section h2 {
+    grid-area: aboutTitle;
+    font-family: "Yellowtail", cursive;
+    font-size: 36pt;
+    text-align: center;
+    padding-top: 5%;
+    padding-bottom: 2%;
+  }
+
+  .about-top-section p {
+    grid-area: aboutPara;
+    padding: 3%;
+  }
+
+  .about-top-section img {
+    grid-area: picture;
+    padding-left: 22%;
+  }
+
+  .skills-chart-section {
+    background-color: rgba(255, 255, 255, 0.8);
+    margin-top: 10%;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-auto-rows: auto;
+    grid-template-areas:
+      ". skillsTitle ."
+      ". img .";
+  }
+
+  section:nth-of-type(2) h2 {
+    text-align: center;
+    padding-top: 2%;
+    font-family: "Yellowtail", cursive;
+    font-size: 25pt;
+    grid-area: skillsTitle;
+  }
+
+  section:nth-of-type(2) img {
+    grid-area: img;
+    padding: 2% 0 2% 2%;
+    height: 200px;
+  }
+
+  .about-footer {
+    margin-top: 2%;
+  }
+
+  /* About page end */
+
+  /* Projects Page */
+
+  #projectContainer {
+    text-align: center;
+    display: grid;
+    padding-bottom: 4%;
+    column-gap: 1%;
+    row-gap: 2%;
+    grid-template-columns: 1fr;
+    grid-auto-rows: auto;
+    grid-template-areas:
+      "projectTitle"
+      "box1"
+      "box2"
+      "box3"
+      "box4"
+      "box5";
+  }
+
+  #projectContainer h2 {
+    grid-area: projectTitle;
+    padding-top: 4%;
+    font-family: "Yellowtail", cursive;
+    font-size: 36pt;
+    text-align: center;
+  }
+
+  #projectContainer p {
+    margin-top: 2%;
+  }
+
+  .projectBox1 {
+    grid-area: box1;
+    background-color: rgba(255, 255, 255);
+    box-shadow: 5px 5px 5px #888888;
+    margin: 0 4%;
+  }
+
+  .projectBox2 {
+    grid-area: box2;
+    background-color: rgba(255, 255, 255);
+    box-shadow: 5px 5px 5px #888888;
+    margin: 0 4%;
+  }
+
+  .projectBox2 img {
+    height: 157px;
+  }
+
+  .projectBox3 {
+    grid-area: box3;
+    background-color: rgba(255, 255, 255);
+    box-shadow: 5px 5px 5px #888888;
+    margin: 0 4%;
+  }
+
+  .projectBox4 {
+    grid-area: box4;
+    background-color: rgba(255, 255, 255);
+    box-shadow: 5px 5px 5px #888888;
+    margin: 0 4%;
+  }
+
+  .projectBox5 {
+    grid-area: box5;
+    background-color: rgba(255, 255, 255);
+    box-shadow: 5px 5px 5px #888888;
+    margin: 0 4%;
+  }
+
+  .projectBox5 img {
+    height: 157px;
+  }
+
+  #project-footer {
+    margin-top: 35%;
+  }
+
+  /* Projects end */
+
+  /* Resume Start */
+  #resumeContainer {
+    padding-bottom: 0%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: auto;
+    grid-template-areas:
+      "resumeInfo"
+      "resume";
+  }
+
+  .resumeFirstSection {
+    grid-area: resumeInfo;
+    margin: 5% 0;
+    background-color: rgba(255, 255, 255, 0.8);
+  }
+
+  .resumeFirstSection h2 {
+    font-family: "Yellowtail", cursive;
+    font-size: 36pt;
+    padding: 8% 0 0 30%;
+  }
+
+  .resumeFirstSection a {
+    padding-left: 35%;
+  }
+
+  .resumeSecondSection {
+    grid-area: resume;
+    padding-top: 4%;
+    height: 100px;
+  }
+
+  .resumeSecondSection img {
+    height: 350px;
+    padding-left: 15%;
+  }
+
+  #resume-footer {
+    margin-top: 83%;
   }
 }
