@@ -517,8 +517,24 @@ section:nth-of-type(2) img {
     margin: 0 4%;
   }
 
+  .projectBox1 img {
+    height: 136px;
+  }
+
+  .projectBox2 img {
+    height: 136px;
+  }
+
+  .projectBox3 img {
+    height: 136px;
+  }
+
+  .projectBox4 img {
+    height: 135px;
+  }
+
   .projectBox5 img {
-    height: 157px;
+    height: 136px;
   }
 
   #project-footer {
