@@ -437,8 +437,8 @@ section:nth-of-type(2) img {
 
   section:nth-of-type(2) img {
     grid-area: img;
-    padding: 2% 0 2% 2%;
-    height: 200px;
+    padding: 2%;
+    height: 180px;
   }
 
   .about-footer {
