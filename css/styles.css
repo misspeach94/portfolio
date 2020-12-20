@@ -37,8 +37,11 @@ body {
 }
 
 #vectorSelf {
-  grid-area: vector;
   padding-left: 20%;
+}
+
+#flex-vector {
+  grid-area: vector;
 }
 
 .contact-section {
@@ -90,6 +93,21 @@ body {
   grid-area: insta;
 }
 
+.linkedin-col {
+  display: flex;
+  justify-content: center;
+}
+
+.instagram-col {
+  display: flex;
+  justify-content: center;
+}
+
+.github-col {
+  display: flex;
+  justify-content: center;
+}
+
 footer {
   background-color: #dcf2e6;
   text-align: center;
@@ -131,9 +149,10 @@ footer p {
   padding: 2% 0% 2% 10%;
 }
 
-.about-top-section img {
+.flex-pic {
   grid-area: picture;
-  padding-left: 10%;
+  display: flex;
+  justify-content: center;
 }
 
 .skills-chart-section {
@@ -279,34 +298,40 @@ section:nth-of-type(2) img {
     /* margin-top: 1%; */
     padding: 10% 0;
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 2fr;
     grid-auto-rows: auto;
     grid-template-areas:
-      ". ."
-      "para1 vector"
-      "para1 vector";
+      "."
+      "para1"
+      "vector";
   }
 
   .top-section p:first-child {
     font-family: "Yellowtail", cursive;
     font-size: 30pt;
-    padding-left: 5%;
+    padding-left: 0;
   }
 
   #para1 {
     grid-area: para1;
     padding: 0;
     font-size: 16pt;
+    text-align: center;
   }
 
   .top-section p:nth-child(2) {
-    padding-left: 15%;
+    padding-left: 0;
   }
 
   #vectorSelf {
-    grid-area: vector;
-    height: 100px;
+    height: 150px;
     padding: 0;
+  }
+
+  #flex-vector {
+    grid-area: vector;
+    display: flex;
+    justify-content: center;
   }
 
   .contact-section {
@@ -315,11 +340,11 @@ section:nth-of-type(2) img {
     background-color: rgba(255, 255, 255, 0.8);
     border-bottom: #dcf2e6 solid 10px;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
     grid-auto-rows: auto;
     grid-template-areas:
-      "contact-part1 contact-part1 contact-part2 contact-part2"
-      "contact-part1 contact-part1 contact-part2 contact-part2";
+      "contact-part1"
+      "contact-part2";
   }
 
   .contact-section #contact-part1 {
@@ -334,7 +359,7 @@ section:nth-of-type(2) img {
   .contact-section #contact-part2 {
     grid-area: contact-part2;
     text-align: center;
-    padding-top: 15%;
+    padding-top: 5%;
   }
 
   .social-media-section {
@@ -364,7 +389,7 @@ section:nth-of-type(2) img {
 
   .index-page section:nth-of-type(2) h2 {
     text-align: center;
-    padding-top: 20%;
+    padding-top: 10%;
     font-size: 26pt;
   }
 
@@ -412,12 +437,13 @@ section:nth-of-type(2) img {
 
   .about-top-section img {
     grid-area: picture;
-    padding-left: 22%;
+    /* padding-left: 22%; */
   }
 
   .skills-chart-section {
     background-color: rgba(255, 255, 255, 0.8);
     margin-top: 10%;
+    overflow: hidden;
 
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -483,6 +509,9 @@ section:nth-of-type(2) img {
     background-color: rgba(255, 255, 255);
     box-shadow: 5px 5px 5px #888888;
     margin: 0 4%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 
   .projectBox2 {
@@ -490,6 +519,9 @@ section:nth-of-type(2) img {
     background-color: rgba(255, 255, 255);
     box-shadow: 5px 5px 5px #888888;
     margin: 0 4%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 
   .projectBox2 img {
@@ -501,6 +533,9 @@ section:nth-of-type(2) img {
     background-color: rgba(255, 255, 255);
     box-shadow: 5px 5px 5px #888888;
     margin: 0 4%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 
   .projectBox4 {
@@ -508,6 +543,9 @@ section:nth-of-type(2) img {
     background-color: rgba(255, 255, 255);
     box-shadow: 5px 5px 5px #888888;
     margin: 0 4%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 
   .projectBox5 {
@@ -515,14 +553,17 @@ section:nth-of-type(2) img {
     background-color: rgba(255, 255, 255);
     box-shadow: 5px 5px 5px #888888;
     margin: 0 4%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 
   .projectBox1 img {
-    height: 136px;
+    height: 135px;
   }
 
   .projectBox2 img {
-    height: 136px;
+    height: 137px;
   }
 
   .projectBox3 img {
@@ -573,15 +614,21 @@ section:nth-of-type(2) img {
   .resumeSecondSection {
     grid-area: resume;
     padding-top: 4%;
-    height: 100px;
+    display: flex;
+    justify-content: center;
   }
 
   .resumeSecondSection img {
     height: 350px;
-    padding-left: 15%;
   }
 
   #resume-footer {
-    margin-top: 83%;
+    margin-top: 10%;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .index-page footer {
+    margin-top: 10%;
   }
 }
